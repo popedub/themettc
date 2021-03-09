@@ -65,7 +65,8 @@ add_action('after_setup_theme', function () {
      */
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
-        'menu_alt' => __('Menu Alt', 'sage')
+        'menu_alt' => __('Menu Alt', 'sage'),
+        'footer_menu' => __('Menu Footer', 'sage'),
     ]);
 
     /**

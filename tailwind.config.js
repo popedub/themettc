@@ -16,6 +16,16 @@ module.exports = {
         '2/12': '16.666667%',
         '3/12': '24.999999%',
       },
+      filter: { // defaults to {}
+        'none': 'none',
+        'grayscale': 'grayscale(1)',
+        'invert': 'invert(1)',
+        'sepia': 'sepia(1)',
+      },
+      backdropFilter: { // defaults to {}
+        'none': 'none',
+        'blur': 'blur(20px)',
+      },
       // eslint-disable-next-line no-unused-vars
       backgroundImage: theme => ({
 
@@ -25,6 +35,11 @@ module.exports = {
   },
   variants: {
     extend: {},
+    filter: ['responsive', 'hover', 'focus'], // defaults to ['responsive']
+    backdropFilter: ['responsive'], // defaults to ['responsive']
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('tailwindcss-filters'),
+  ],
 };

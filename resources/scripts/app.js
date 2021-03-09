@@ -6,6 +6,8 @@ import ScrollMagic from 'scrollmagic/scrollmagic/uncompressed/ScrollMagic';
 import scrollSpy from '@sidsbrmnn/scrollspy';
 import Masonry from 'masonry-layout/dist/masonry.pkgd';
 import imagesLoaded from 'imagesloaded/imagesloaded.pkgd';
+import lightGallery from 'lightgallery/dist/js/lightgallery-all';
+
 
 $(document).ready(() => {
   // console.log('Hello world');
@@ -32,7 +34,11 @@ const options = {
 }
 
 // Shorter way
-scrollSpy('#menu-menu-2', options)
+var scro = document.getElementById('menu-menu-2')
+if(scro) {
+  scrollSpy('#menu-menu-2', options)
+}
+
 
 document.querySelectorAll('.menu-item a').forEach(anchor => {
   anchor.addEventListener('click', function () {
@@ -84,4 +90,15 @@ if(msry) {
 
     })
   })
+  $('#msry').lightGallery({
+    download: false,
+    thumbnail: false,
+    rotate: false,
+    share: false,
+    zoom: false,
+    autoplay: false,
+    autoplayControls: false,
+    progressBar: false,
+    selector: '.item-g',
+  });
 }
