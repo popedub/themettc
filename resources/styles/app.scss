@@ -1,0 +1,28 @@
+@import 'tailwindcss/base';
+
+@layer base {
+  // h1 {
+  //   @apply text-3xl lg:text-5xl;
+  // }
+  // h2 {
+  //   @apply text-lg;
+  // }
+  // h3 {
+  //   @apply text-base lg:text-lg;
+  // }
+  a {
+    @apply border-b-2 border-black hover:border-transparent focus:border-transparent transition duration-200 ease-in-out;
+  }
+  ul {
+    @apply list-disc list-inside;
+  }
+  .nav li a {
+    @apply border-b-2 border-transparent hover:border-black focus:border-black transition duration-200 ease-in-out;
+  }
+}
+
+@import 'common/global';
+
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "~hamburgers/_sass/hamburgers/hamburgers";

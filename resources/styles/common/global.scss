@@ -1,0 +1,42 @@
+body {
+  @apply font-sans;
+}
+
+.brand {
+  @apply text-3xl font-medium text-indigo-500;
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.visible {
+  opacity: 1;
+}
+
+#menu-menu-1 {
+  @apply list-none flex flex-wrap flex-col md:flex-row items-center content-center md:content-end justify-center md:justify-end;
+
+  li {
+    @apply pl-4 my-4 md:my-0;
+  }
+}
+
+.nav li a.active,
+.current_page_item a {
+  border-bottom: 2px solid black !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:target:before {
+  content: '';
+  display: block;
+  height: 100px;
+  margin: 100px 0 0;
+}
+
+$hamburger-layer-height: 2px;
+$hamburger-layer-spacing: 8px;
