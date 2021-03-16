@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
 body {
   @apply font-sans;
 }
@@ -16,27 +18,42 @@ body {
 
 #menu-menu-1,
 #menu-menu-alt {
-  @apply list-none flex flex-wrap flex-col md:flex-row items-center content-center md:content-end justify-center md:justify-end;
+  @apply list-none flex flex-wrap flex-col lg:flex-row items-center content-center lg:content-end justify-center lg:justify-end;
 
   li {
-    @apply pl-4 my-4 md:my-0;
+    @apply pl-4 my-4 lg:my-0;
   }
 }
 
 .nav li a.active,
 .current_page_item a {
-  border-bottom: 2px solid black !important;
+  border-bottom: 2px solid #f53d5c !important;
+}
+
+#menu-social-1 li,
+#menu-social li {
+  display: inline-block;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+
+#menu-social-1 li a,
+#menu-social li a {
+  border-bottom: none;
+
+  &:hover,
+  &:focus {
+    border-bottom: none;
+    color: #f53d5c;
+  }
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-:target:before {
-  content: '';
-  display: block;
-  height: 100px;
-  margin: 100px 0 0;
+section.bg-marco:last-child {
+  display: none;
 }
 
 $hamburger-layer-height: 2px;

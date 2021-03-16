@@ -9,6 +9,7 @@ import imagesLoaded from 'imagesloaded/imagesloaded.pkgd';
 import lightGallery from 'lightgallery/dist/js/lightgallery-all';
 
 
+
 $(document).ready(() => {
   // console.log('Hello world');
 });
@@ -17,23 +18,24 @@ var controller = new ScrollMagic.Controller();
 
 var revealElements = document.getElementsByClassName("reveal");
 for (var i = 0; i < revealElements.length; i++) { // create a scene for each element
-  new ScrollMagic.Scene({
+   new ScrollMagic.Scene({
     triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
-    offset: 50,												 // start a little later
+    offset: 200,												 // start a little later
     triggerHook: 0.9,
+    duration: 0,
   })
     .setClassToggle(revealElements[i], "visible") // add class toggle
-    .reverse(false) //no quita la clase
-    .addTo(controller);
+    .addTo(controller)
+
 }
 
 const options = {
-  sectionSelector: 'section',  // Query selector to your sections
+  sectionSelector: '.reveal',  // Query selector to your sections
   targetSelector: '.menu-item a', // Query selector to your elements that will be added `active` class
-  offset: 300,                 // Menu item will active before scroll to a matched section 200px
+  offset: 0,                 // Menu item will active before scroll to a matched section 200px
 }
 
-// Shorter way
+//Shorter way
 var scro = document.getElementById('menu-menu-2')
 if(scro) {
   scrollSpy('#menu-menu-2', options)
@@ -42,11 +44,11 @@ if(scro) {
 
 document.querySelectorAll('.menu-item a').forEach(anchor => {
   anchor.addEventListener('click', function () {
-    // if (document.querySelector('#menu-menu-1 a.active') !== null) {
-    // document.querySelector('#menu-menu-1 a.active').classList.remove('active');
-    // }
-      //this.classList.add('active');
-      //esto para la funcionalidad del menu en phone
+    if (document.querySelector('#menu-menu-2 a.active') !== null) {
+    document.querySelector('#menu-menu-2 a.active').classList.remove('active');
+    }
+      this.classList.add('active');
+      // esto para la funcionalidad del menu en phone
     if (document.getElementsByTagName('body')[0].classList.contains('overflow-hidden')){
       document.getElementsByTagName('body')[0].classList.remove('overflow-hidden')
       document.getElementById('hmbrgr').classList.remove('is-active')
@@ -61,6 +63,7 @@ document.getElementById('hmbrgr').addEventListener('click', function(){
   document.getElementsByTagName('body')[0].classList.toggle('overflow-hidden')
   document.getElementsByTagName('header')[0].classList.toggle('z-30')
   document.getElementById('nav').classList.toggle('-translate-y-full')
+  document.getElementById('menu-social').classList.toggle('hidden')
 });
 
 

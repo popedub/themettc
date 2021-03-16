@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   purge: {
     content: [
@@ -10,7 +11,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        'rojo': {
+          DEFAULT: '#f53d5c',
+        },
+      },
+      fontFamily: {
+        sans: ['Nunito Sans', ...defaultTheme.fontFamily.sans],
+      },
       inset: {
         '1/12': '8.333333%',
         '2/12': '16.666667%',
@@ -28,18 +36,21 @@ module.exports = {
       },
       // eslint-disable-next-line no-unused-vars
       backgroundImage: theme => ({
-
-        'pattern': "url('../images/flores-sidebar.jpg')",
+        'pattern': "url('../images/ventana.svg')",
+        'marco': "url('../images/ventana-parallax.svg')",
       }),
+
     },
   },
   variants: {
     extend: {},
     filter: ['responsive', 'hover', 'focus'], // defaults to ['responsive']
     backdropFilter: ['responsive'], // defaults to ['responsive']
+    backgroundColor: ['even', 'odd'],
   },
   plugins: [
     require('@tailwindcss/typography'),
     require('tailwindcss-filters'),
+    require('tailwindcss-pseudo-elements'),
   ],
 };

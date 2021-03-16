@@ -34,7 +34,8 @@ mix
 mix
   .copyDirectory('resources/images', 'public/images')
   .copyDirectory('resources/fonts', 'public/fonts')
-  .copyDirectory('node_modules/lightgallery/dist/fonts', 'public/fonts');
+  .copyDirectory('node_modules/lightgallery/dist/fonts', 'public/fonts')
+  .copyDirectory('node_modules/@fortawesome/fontawesome-free/webfonts', 'public/webfonts');
 
 mix
   .sourceMaps()

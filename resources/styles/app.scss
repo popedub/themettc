@@ -1,26 +1,17 @@
 @import 'tailwindcss/base';
 
 @layer base {
-  // h1 {
-  //   @apply text-3xl lg:text-5xl;
-  // }
-  // h2 {
-  //   @apply text-lg;
-  // }
-  // h3 {
-  //   @apply text-base lg:text-lg;
-  // }
-  a:not(.sin) {
-    @apply border-b-2 border-black hover:border-transparent focus:border-transparent transition duration-200 ease-in-out;
+  a:not(.sin):not(.cli-plugin-button) {
+    @apply border-b-2 border-rojo hover:border-transparent focus:border-transparent transition duration-200 ease-in-out;
   }
   ul {
     @apply list-disc list-inside;
   }
   .nav li {
-    @apply md:mb-5;
+    @apply lg:mb-5;
   }
   .nav li a {
-    @apply border-b-2 border-transparent hover:border-black focus:border-black transition duration-200 ease-in-out uppercase font-bold;
+    @apply border-b-2 border-transparent hover:border-rojo focus:border-rojo transition duration-200 ease-in-out uppercase font-bold;
   }
 }
 
@@ -30,3 +21,4 @@
 @import 'tailwindcss/utilities';
 @import "~hamburgers/_sass/hamburgers/hamburgers";
 @import "~lightgallery/dist/css/lightgallery.css";
+@import '~@fortawesome/fontawesome-free/css/all.css';
