@@ -17,5 +17,9 @@ add_filter('excerpt_more', function () {
 
 add_filter('upload_mimes', function(){
     $mimes['svg'] = 'image/svg+xml';
+    $mimes['jpg'] = 'image/jpg';
+    $mimes['jpge'] = 'image/jpge';
+    $mimes['png'] = 'image/png';
+    $mimes['pdf'] = 'application/pdf';
     return $mimes;
 });

@@ -1,25 +1,20 @@
 <div id="msry" class="flex flex-wrap pb-6">
 <div class="grid-sizer w-1/2 lg:w-1/3"></div>
-@for ($i = 0; $i < 15; $i++)
-@if ($i % 2 == 0)
-<div class="item-g w-1/2 lg:w-1/3 p-2" data-src="https://picsum.photos/800/1200">
+@hasfields('galeria')
+  @php
+    $galeria = get_field('galeria')
+  @endphp
+  @foreach ($galeria as $img)
+    <div class="item-g w-1/2 lg:w-1/3 pl-2 pr-2 pb-4 cursor-pointer" data-src="{{ $img['url'] }}">
 
-    <img class="" src="https://picsum.photos/800/1200" alt="">
+      <img class="" src="{{ $img['url'] }}" alt="{{ $img['alt'] }}">
 
-</div>
+    </div>
+  @endforeach
 
-@elseif($i % 3 == 0)
-<div class="item-g w-1/2 lg:w-1/3 p-2" data-src="https://picsum.photos/1200/800">
 
-    <img class="" src="https://picsum.photos/1200/800" alt="">
+@endhasfields
 
-</div>
-@elseif($i % 2 >= 1)
-<div class="item-g w-1/2 lg:w-1/3 p-2" data-src="https://picsum.photos/800/800">
 
-    <img class="" src="https://picsum.photos/800/800" alt="">
 
-</div>
-@endif
-@endfor
 </div>

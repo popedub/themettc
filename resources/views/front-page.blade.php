@@ -16,7 +16,7 @@
                   top-0 min-h-screen
                   @sub('bg-color') py-8 reveal transition-opacity duration-300 ease-in-out">
 
-        <div class="max-w-prose px-4 lg:mx-auto lg:px-44 pb-8 2xl:px-0 2xl:pb-0">
+        <div class="max-w-prose px-4 lg:mx-auto pb-8 2xl:px-0 2xl:pb-0">
 
           @if ($id === 'nichebusinessconcierge')
             <h1 class="uppercase lg:text-center lg:pt-16 2xl:text-left 2xl:mt-0">{{ __('The Courtyard Consulting', 'sage') }}</h1>

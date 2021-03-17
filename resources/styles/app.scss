@@ -1,11 +1,8 @@
 @import 'tailwindcss/base';
 
 @layer base {
-  a:not(.sin):not(.cli-plugin-button) {
+  a:not(.sin) {
     @apply border-b-2 border-rojo hover:border-transparent focus:border-transparent transition duration-200 ease-in-out;
-  }
-  ul {
-    @apply list-disc list-inside;
   }
   .nav li {
     @apply lg:mb-5;

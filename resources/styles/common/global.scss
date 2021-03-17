@@ -48,6 +48,15 @@ body {
   }
 }
 
+a.cli-plugin-button {
+  border-bottom: none;
+
+  &:hover,
+  &:focus {
+    border-bottom: none;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
