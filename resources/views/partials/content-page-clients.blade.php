@@ -1,5 +1,5 @@
 @hasfields('fashion')
-<section class="prose-2xl">
+<section class="min-w-full prose sm:prose lg:prose-lg 2xl:prose-2xl">
   <h2 class="border-b-4 border-rojo"> {{ __('FASHION','sage') }}</h2>
   <div class="grid grid-cols-2 md:grid-cols-6 gap-6 items-center">
   @fields('fashion')
@@ -13,7 +13,7 @@
 @endhasfields
 
 @hasfields('Kids')
-<section class="prose-2xl">
+<section class="min-w-full prose sm:prose lg:prose-lg 2xl:prose-2xl">
   <h2 class="border-b-4 border-rojo"> {{ __('KIDS','sage') }}</h2>
   <div class="grid grid-cols-2 md:grid-cols-6 gap-6 items-center">
     @fields('Kids')
@@ -27,7 +27,7 @@
 @endhasfields
 
 @hasfields('others')
-<section class="prose-2xl">
+<section class="min-w-full prose sm:prose lg:prose-lg 2xl:prose-2xl">
   <h2 class="border-b-4 border-rojo"> {{ __('OTHERS','sage') }}</h2>
   <div class="grid grid-cols-2 md:grid-cols-6 gap-6 items-center">
     @fields('others')

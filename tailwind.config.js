@@ -34,7 +34,6 @@ module.exports = {
         'none': 'none',
         'blur': 'blur(20px)',
       },
-      // eslint-disable-next-line no-unused-vars
       backgroundImage: theme => ({
         'pattern': "url('../images/ventana.svg')",
         'marco': "url('../images/ventana-parallax.svg')",
