@@ -54,6 +54,9 @@ document.querySelectorAll('.menu-item a').forEach(anchor => {
       document.getElementById('hmbrgr').classList.remove('is-active')
       document.getElementById('nav').classList.add('-translate-y-full')
     }
+    if (document.querySelector('.menu-social-container a.active') !== null) {
+      document.querySelector('.menu-social-container a.active').classList.remove('active');
+    }
 
   });
 });
@@ -85,14 +88,21 @@ window.addEventListener('resize', function () {
 //pagina Dreams
 var msry = document.getElementById('msry');
 if(msry) {
-  imagesLoaded(msry, function() {
-    msry = new Masonry( '#msry', {
-      itemSelector: '.item-g',
-      columnWidth: '.grid-sizer',
-      percentPosition: true,
+  // var imgL = imagesLoaded(msry, function () {
 
-    })
-  })
+
+  var imgL = imagesLoaded(document.getElementById('msry'))
+    imgL.on('progress', function (instance, image) {
+    image.img.classList.remove('opacity-0')
+      msry = new Masonry('#msry', {
+        itemSelector: '.item-g',
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+
+      })
+    });
+
+  //})
   $('#msry').lightGallery({
     download: false,
     thumbnail: false,

@@ -9,5 +9,6 @@
     @include('partials.page-header')
     @include('partials.content-page')
   @endwhile
-  <div class="bg-marco"></div>
+  <div class="bg-marco bg-gray-200"></div>
+  <div class="bg-marco bg-white"></div>
 @endsection
